@@ -1,4 +1,4 @@
-## Creditcard -Fraud Detection Algorithm on Imbalanced Dataset:
+## Creditcard Fraud Detection (NearMiss & SMOTE)Algorithm on Imbalanced Dataset:
 This is an excerpt from a notebook on Kaggle done by Janio Martinez.
 
 ### Our Goals:
@@ -12,6 +12,17 @@ Understand common mistaked made with imbalanced datasets.
 Never test on the oversampled or undersampled dataset.
 If we want to implement cross validation, remember to oversample or undersample your training data during cross-validation, not before!
 Don't use accuracy score as a metric with imbalanced datasets (will be usually high and misleading), instead use f1-score, precision/recall score or confusion matrix.
+
+### Algorithm used:
+#### NearMiss Algorithm (Under Sampling) :
+NearMiss is an under-sampling technique.
+* It aims to balance class distribution by randomly eliminating majority class examples. When instances of two different classes are very close to each other, we remove the instances of the majority class to increase the spaces between the two classes. This helps in the classification process.
+* To prevent problem of information loss in most under-sampling techniques, near-neighbor methods are widely used.
+#### Understanding SMOTE:(Over Sampling)
+* Solving the Class Imbalance: SMOTE creates synthetic points from the minority class in order to reach an equal balance between the minority and majority class.
+* Location of the synthetic points: SMOTE picks the distance between the closest neighbors of the minority class, in between these distances it creates synthetic points.
+*Final Effect: More information is retained since we didn't have to delete any rows unlike in random undersampling.
+* Accuracy || Time Tradeoff: Although it is likely that SMOTE will be more accurate than random under-sampling, it will take more time to train since no rows are eliminated as previously stated.
 
 ### Summary:
 The transaction amount is relatively small. The mean of all the mounts made is approximately USD 88.
