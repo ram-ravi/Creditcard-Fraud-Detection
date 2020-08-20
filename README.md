@@ -52,4 +52,4 @@ Implementing SMOTE on our imbalanced dataset helped us with the imbalance of our
 
 
 
-*Neural networks
+
